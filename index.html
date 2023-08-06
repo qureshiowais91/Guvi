@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form and Table</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <form id="myForm">
+            <div class="form-group">
+                <label for="nameInput">First Name:</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emailInput">Last Name:</label>
+                <input type="text" class="form-control" id="emailInput" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ageInput">Age:</label>
+                <input type="number" class="form-control" id="ageInput" placeholder="Enter your age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="passwordInput">Pincode:</label>
+                <input type="number" class="form-control" id="passwordInput" placeholder="Enter your password" required>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="addressInput">Address:</label>
+                <input type="text" class="form-control" id="addressInput" required>
+            </div>
+
+            <div class="form-group">
+                <label for="foodSelect">Select your favorite foods (Select 2):</label>
+                <select class="form-control" id="foodSelect" multiple required>
+                    <option value="pizza">Pizza</option>
+                    <option value="burger">Burger</option>
+                    <option value="pasta">Pasta</option>
+                    <option value="sushi">Sushi</option>
+                    <option value="icecream">Ice Cream</option>
+                    <option value="salad">Salad</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="StateInput">State:</label>
+                <input type="text" class="form-control" id="StateInput" placeholder="Enter your state" required>
+            </div>
+            <div class="form-group">
+                <label for="CountryInput">Country:</label>
+                <input type="text" class="form-control" id="CountryInput" placeholder="Enter your country" required>
+            </div>
+            <button type="submit" id="submitbtn" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <div class="container mt-5 mb-5 ">
+        <table border="1" id="dataTable">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Pincode</th>
+                    <th>Date of Birth</th>
+                    <th>Favorite Foods</th>
+                    <th>State</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Existing table data goes here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
