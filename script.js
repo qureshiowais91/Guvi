@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const lastNameInput = document.getElementById("emailInput");
     const ageInput = document.getElementById("ageInput");
     const addressInput = document.getElementById("addressInput");
-    const pincodeInput = document.getElementById("passwordInput");
+    const pincodeInput = document.getElementById("pinCodeInput");
     const foodSelect = document.getElementById("foodSelect");
     const stateInput = document.getElementById("StateInput");
     const countryInput = document.getElementById("CountryInput");
