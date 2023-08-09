@@ -3,24 +3,30 @@ const col9Container = document.querySelector(".col-9");
 
 document.addEventListener("keydown", (event) => {
   const key = event.key;
-  const regex = /[0-9/*\-+]/;
+  const regex = /^[0-9/*+\-]|Backspace|Enter$/;
 
-  if (regex.test(key)) {
+  if (!regex.test(key)) {
     event.preventDefault();
-    display.value += key;
-  } else if (key === "=" || key === "Enter") {
-    event.preventDefault();
-    evaluateExpression();
-  } else if (key === "Backspace") {
-    event.preventDefault();
-    handleBackspace();
-  } else if (key === ".") {
-    event.preventDefault();
-    handleDecimalPoint();
-  }
+    alert("Only Number Are Alloed")
+  }else{
+    if (key === "=" || key === "Enter") {
+      event.preventDefault();
+      evaluateExpression();
+    } else if (key === "Backspace") {
+      event.preventDefault();
+      handleBackspace();
+    } else if (key === ".") {
+      event.preventDefault();
+      handleDecimalPoint();
+    }else{
+      display.value += key;
+    }
+  } 
+  
+ 
 });
-
-col9Container.addEventListener("click", function (event) {
+// event daligation 
+col9Container.addEventListener("keypress", function (event) {
   const clickedButton = event.target;
 
   if (clickedButton.classList.contains("btnC")) {
@@ -36,7 +42,7 @@ col9Container.addEventListener("click", function (event) {
   } else if (clickedButton.classList.contains("btnmod")) {
     display.value += "%";
   } else if (/^[0-9]$/.test(clickedButton.innerText)) {
-    display.value += clickedButton.innerText;
+    display.value += clickedButton.innerText; // 0-9 using regex
   } else if (clickedButton.classList.contains("btnplus")) {
     display.value += "+";
   } else if (clickedButton.classList.contains("btnmins")) {
