@@ -3,11 +3,11 @@ const col9Container = document.querySelector(".col-9");
 
 document.addEventListener("keydown", (event) => {
   const key = event.key;
-  const regex = /^[0-9/*+\-]|Backspace|Enter$/;
+  const regex = /^(?!.*\.\.)[0-9./*+\-]|Backspace|Enter$/;
 
   if (!regex.test(key)) {
     event.preventDefault();
-    alert("Only Number Are Alloed")
+    alert("Only Number Are Allowed")
   }else{
     if (key === "=" || key === "Enter") {
       event.preventDefault();
@@ -26,7 +26,7 @@ document.addEventListener("keydown", (event) => {
  
 });
 // event daligation 
-col9Container.addEventListener("keypress", function (event) {
+col9Container.addEventListener("click", function (event) {
   const clickedButton = event.target;
 
   if (clickedButton.classList.contains("btnC")) {
@@ -65,9 +65,8 @@ function handleBackspace() {
 }
 
 function handleDecimalPoint() {
-  if (!display.value.includes(".")) {
+ const regex = /.*\..*\..*/;
     display.value += ".";
-  }
 }
 
 function performMemoryOperation(operation) {
